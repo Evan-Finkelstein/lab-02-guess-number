@@ -27,6 +27,11 @@ body {
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
 }
+button{
+    margin: 5px;
+}
+    
+
 
 #result-span{
     border: black 1px solid;
@@ -44,6 +49,10 @@ input{
 }
 .hidden{
     display: none;
+}
+h1{
+    font-size: 3em;
+    font-family: monospace;
 }
 main {
     display: flex;

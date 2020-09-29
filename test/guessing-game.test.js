@@ -1,16 +1,17 @@
 // IMPORT MODULES under test here:
-// import { example } from '../example.js';
-
+import { guessANumber } from '../arbitrary-test.js'
+// import { example } from '../example.js';s
 const test = QUnit.test;
+1
 
-test('time to test a function', (expect) => {
+test('should return 420 if user guesses 5', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = true;
-    
+    const expected = 420;
+    const input = 5;
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = false;
+    const actual = guessANumber(input)
 
     //Expect
     // Make assertions about what is expected versus the actual result
