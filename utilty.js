@@ -4,8 +4,8 @@ const refreshButton = document.getElementById('refresh-button');
 const submitButton = document.getElementById('submit-button');
 const intro = document.getElementById('intro');
 const input = document.getElementById('input');
-const myNumber = Math.floor((Math.random() * 20)+1)
-let guessesLeft = 4
+const myNumber = Math.floor((Math.random() * 20)+1);
+let guessesLeft = 4;
 
 console.log(myNumber);
 
@@ -15,7 +15,7 @@ export function guessingGame(){
     if (input.valueAsNumber === myNumber){
         results.textContent = 'You guessed it Nostradamus';
         refreshButton.classList.toggle('hidden');
-        refreshButton.textContent = 'Bet you can\'t guess it again'
+        refreshButton.textContent = 'Bet you can\'t guess it again';
         submitButton.classList.toggle('hidden');
     }  
     
@@ -47,8 +47,7 @@ export function guessingGame(){
     }
     if (guessesLeft === 3){
         intro.textContent = 'Youre not very good at this';
-    }
-            
+    }      
     }
     
     
