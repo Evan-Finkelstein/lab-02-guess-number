@@ -17,15 +17,13 @@ export function guessingGame(){
         refreshButton.classList.toggle('hidden');
         refreshButton.textContent = 'Bet you can\'t guess it again';
         submitButton.classList.toggle('hidden');
+        intro.textContent = 'You got lucky this time...';
     }  
-    
-
     
     if (input.valueAsNumber < myNumber){
         guessesLeft--;
         results.textContent = 'Your number is too low';
         guesses.textContent = guessesLeft;
-    
     } 
 
     if (input.valueAsNumber > myNumber){
@@ -33,21 +31,28 @@ export function guessingGame(){
         results.textContent = 'Your number is too high';
         guesses.textContent = guessesLeft;
     }
+
+    if (guessesLeft === 3){
+        intro.textContent = 'Youre not very good at this';
+    }   
+
+    if (guessesLeft === 2){
+        intro.textContent = '*mocking laughter*';
+    }
+
+    if (guessesLeft === 1){
+            intro.textContent = 'Oh jeeze only one guess left...no pressure.';
+    }
+        
     if (guessesLeft === 0){
         results.textContent = 'You lose loser. Sucks to suck.';
         intro.textContent = 'Shame.';
         refreshButton.classList.toggle('hidden');
         submitButton.classList.toggle('hidden');
     }
-    if (guessesLeft === 1){
-        intro.textContent = 'Oh jeeze only one guess left...no pressure.';
     }
-    if (guessesLeft === 2){
-        intro.textContent = '*mocking laughter*';
-    }
-    if (guessesLeft === 3){
-        intro.textContent = 'Youre not very good at this';
-    }      
-    }
+     
+ 
+
     
     
